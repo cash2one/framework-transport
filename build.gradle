@@ -15,11 +15,14 @@ compileJava {
 
 repositories {
     maven {
-        url 'http://192.168.1.21:8088/nexus/content/repositories/central/'
+        url "http://repo1.maven.org/maven2"
     }
-    maven {
-        url 'http://192.168.1.21:8088/nexus/content/repositories/snapshots/'
-    }
+//    maven {
+//        url 'http://192.168.1.21:8088/nexus/content/repositories/central/'
+//    }
+//    maven {
+//        url 'http://192.168.1.21:8088/nexus/content/repositories/snapshots/'
+//    }
 
 }
 
@@ -31,7 +34,7 @@ dependencies {
             'org.apache.commons:commons-lang3:[3.0,)',
             'com.esotericsoftware:kryo:[4.0.0,)',
             'io.netty:netty-all:4.1.4.Final',
-            'com.feijiu:framework-proxy:1.0-SNAPSHOT'
+            'cglib:cglib:3.2.4'
     )
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
